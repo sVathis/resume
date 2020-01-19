@@ -1,0 +1,302 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[10pt,a4paper]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{fontawesome}
+%\usepackage{hyperref}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Spiros}{Vathis}
+%\title{Resumé title - This is a title}                               % optional, remove / comment the line if not wanted
+\address{Kon/nou  Kavafi 120}{Patra 26335}{Greece}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+30~694~4332973}                   % optional, remove / comment the line if not wanted
+\phone[fixed]{+30~2610~331573}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{spiros.vathis@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{}                 % optional, remove / comment the line if not wanted
+\extrainfo{\faGithub:  \href{https://github.com/sVathis}{github.com/sVathis}\\
+           \faLinkedin: \href{https://www.linkedin.com/in/vathis}{linkedin.com/in/vathis}}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\quote{``I solve problems''}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Experience}
+
+\subsection{Vocational}
+
+\cventry
+{2018 - today}
+{Principal Software Engineer}{Citrix Inc.}{Patras, Greece}{}
+ {%Principal software engineer in the Netscaler Application Development Team.\newline{}
+Detailed achievements:%
+\begin{itemize}
+  \item
+TODO: add achievements after Skytide
+\end{itemize}}
+
+\cventry{2012 -- 2018}{Staff Software Engineer}{Citrix Inc.}{Patras, Greece}{}
+{Staff software engineer in the Netscaler Application Develepment Team.\newline{}
+Detailed achievements:%
+\begin{itemize}
+  \item 
+  Team leader in performance refactoring of a Java based legacy CDN analytics platform
+  \begin{itemize}
+    \item Head of the engineering project that resulted 
+    the increase of the ingestion performance from 90Krec/sec to 500Krecs/sec 
+    and the end-to-end performance from 125Krec/sec to 1.25Mrecs/sec 
+    of a legacy Java based CDN analytics platform.
+  \end{itemize}
+  \item Tech leader in the development of a cache server for the Transparent Caching platform
+  \begin{itemize}
+    \item Design of an S3-like REST HTTP API for caching web content
+    \item Design the corresponding high performance,
+    scalable server platform for web content transparent caching
+    based on the aforementioned REST API.
+    \item Advocate the use of high performance, scalable technologies (node.js, Couchbase NoSQL database) 
+    as key components of the platform during product prototyping. 
+    Act as a node.js evangelist.
+    \item Implement performance critical subsystems.
+    \item Analyze performance test results 
+    and identify major bottlenecks during performance testing.
+  \end{itemize}
+\end{itemize}}
+
+\cventry{2008 -- 2012}{Senior Software Engineer}{Bytemobile Inc.}{Patras, Greece}{}
+{Senior software engineer in Bytemobile European Development.\newline{}%
+Detailed achievements:%
+\begin{itemize}%
+  \item Lead engineer in the Flash Adaptation framework in the Unison platform
+  \begin{itemize}%
+    \item	Integrate third-party Flash Adaptation engine 
+    (developed on the node.js framework) in Unison platform
+    \item	Reverse engineering of C legacy code to identify hook points required for integrating third-party code
+    \item	Design and implement of process management, synchronization, configuration and logging features.
+    \item	Became a node.js enthusiast.
+  \end{itemize}
+  \item Code maintenance for the legacy high performance Content Adaptation proxy
+  \begin{itemize}%
+    \item Design and implement stability enhancements based on bugs reported in the field.
+    \item Identify and propose solutions for major threading and synchronization issue.
+    \item Hands on low level debugging and troubleshooting stability \& threading issues 
+    such as threads starvation, dead-locks etc.
+  \end{itemize}
+  \item Design \& implementation 
+  of a high performance server side HTML content adaptation engine 
+  running on Solaris, based on Mozilla Gecko Runtime Engine (GRE)
+  \begin{itemize}%
+    \item Modifications and extensions in Mozilla Gecko codebase 
+    for embedding it in a high performance, server side content adaptation \& optimization engine
+    \item UML design. Implementation utilizing on XPCOM technologies
+    \item C++ programming on Solaris 10 platform
+    \item Assist co-workers getting familiar with Mozilla codebase, development \& debugging techniques
+    \item Hands-on problem identification and solution
+  \end{itemize}
+\end{itemize}}
+
+
+\cventry{
+  %December
+  2001 --
+  %March
+  2008 }
+  {Senior Software Engineer}{Pi-Medical Ltd.}{Athens, Greece}{}
+  {Design, implementation and maintenance of 3D simulation application of linear accelerators 
+  used for automatic collision detection during radiotherapy treatment.{}%
+\begin{itemize}%
+  \item Design using UML methodology and tools
+  \item C++ programming on Win32 platform
+  \item Extensive use of OpenGL graphics library
+  \item Administration of development support systems (source control, bug tracking, etc.)
+  \item Created documentation for CE approval (required for all medical software)
+  \item Creation and adjustment of 3D models using 3D Studio \& Pro/ENGINEER CAD application
+\end{itemize}}
+
+\cventry{
+%April
+1997 -- 
+%May
+2000}
+{Freelance programmer}{Expertnet S.A.}{Patras, Greece}{}
+{External consultant for research projects PAVE \& ICE-TEL.\newline{}
+Development of cryptography plug-in for Eudora email client 
+using Visual C++ utilizing the PEM, S/MIME and custom chaotic method based security protocols.
+}
+
+
+\subsection{Teaching}
+
+\cventry{
+  %Sep
+  2006 --
+  %June
+  2008}
+  {Assistant lab professor}{Patras Technological Education Institute}{Pirgos, Greece}{}
+{Course: Introduction to computer programming using the Pascal programming language}
+
+\cventry{1999 -- 2000}{Tutor}{Hellenic Mathematical Society}{Patras, Greece}{}
+{Courses:
+\begin{itemize}%
+  \item Introduction to Computer Science
+  \item DOS
+  \item Windows
+  \item Microsoft PowerPoint
+  \item C/C++ programming
+\end{itemize}}
+
+\cventry{
+  %January
+  % 1996 -- 
+  %June
+  1996}{Tutor}{Carriera}{Patras, Greece}{}
+{Lectures on C++ programming language}
+
+\cventry{1996--1998}{Post-graduate lab professor assistant}{Mathematics Department, University of Patras}{Patra, Greece}{}
+{Course: Compilers}
+
+
+\section{Education}
+\cventry{2008--2011}{Msc in Information Systems}{Open University of Cyprus}{Nicosia, Cyprus}{}{}
+\cventry{1991--1995}{Bsc in Mathematics}{Univeristy of Patras}{Patras, Greece}{}{}
+
+\subsection{Master thesis}
+\cvitem{title}{\emph{Title}}
+\cvitem{supervisors}{Supervisors}
+\cvitem{description}{Short thesis abstract}
+
+\section{Patent}
+\cvitem{Number}{\textbf{US9075877}}
+\cvitem{Title}{\emph{System and method for transparent in-network adaptation of rich internet applications }}
+\cvitem{Issued}{Jun 29, 2012}
+\cvitem{Inventors}{Tsolis Georgios, Zafiris Paraskevas, Vathis Spyridon}
+\cvitem{Abstract}
+{A system and method that allows Rich Internet Applications content
+to be adapted for a web browser on a mobile device without requiring an installation of an RIA player.
+The method comprises receiving processing a request by communicating with the web server to acquire the RIA file
+and the parameters used to instantiate the RIA file,
+adapting the RIA content of the RIA file for display in the web browser without requiring an RIA player at the mobile device,
+and providing adapted RIA content to the web browser. }
+
+
+
+\subsection{Miscellaneous}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+
+\section{Millitary service}
+\cventry{2001--2002}{Private}{Research and Informatics Corps}{Hellenic Army}{Greece}{}
+
+\section{Languages}
+\cvitemwithcomment{Greek}{Native}{}
+\cvitemwithcomment{English}{Near native}
+{(More than 10 years of experience in multinational corporate environment)}
+%\cvitemwithcomment{Language 3}{Skill level}{Comment}
+
+%\section{Computer skills}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+\section{Volunter}
+\cvitem{TEDxPatras}{Director of photography in TEDxPatras 2016 and TEDxPatras 2017}
+
+\section{Interests}
+\cvitem{Photography}{Film photography enthusiast. Manual focus lenses collector.}
+\cvitem{Cycling}{Casual cyclist covering 50 to 100 km weekly.}
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Managers}{\begin{itemize}\item Artemis Christopoulou - artemis.christopoulou@citrix.com\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+\date{January 01, 1984}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sahtis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+Albert Einstein discovered that $e=mc^2$ in 1905.
+
+\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `spiros.vathis.tex'.
