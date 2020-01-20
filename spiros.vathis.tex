@@ -24,6 +24,8 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+\newcommand{\fancyhref}[1]{\color{blue}\underline{#1}}
+
 % personal data
 \name{Spiros}{Vathis}
 %\title{Resumé title - This is a title}                               % optional, remove / comment the line if not wanted
@@ -38,7 +40,7 @@
            \faLinkedin: \href{https://www.linkedin.com/in/vathis}{linkedin.com/in/vathis}}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 \quote{``I solve problems''}                                 % optional, remove / comment the line if not wanted
-
+\moderncvicons{marvosym}
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
 %\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
@@ -70,12 +72,50 @@ Detailed achievements:%
 TODO: add achievements after Skytide
 \end{itemize}}
 
+
 \cventry{2012 -- 2018}{Staff Software Engineer}{Citrix Inc.}{Patras, Greece}{}
-{Staff software engineer in the Netscaler Application Develepment Team.\newline{}
-Detailed achievements:%
+{Staff software engineer in the \href{https://www.citrix.com/products/citrix-adc/}{\fancyhref{Netscaler}} Application Develepment Team.
+%Detailed achievements:
 \begin{itemize}
-  \item 
-  Team leader in performance refactoring of a Java based legacy CDN analytics platform
+  \item Feature head engineer and team leader in development of 
+  \href{https://docs.citrix.com/en-us/netscaler/12/netscaler-support-for-telecom-service-providers/NetScaler-Video-Optimization/Getting-Started.html}{\fancyhref{Netscaler Video Optimization}} feature for mobile operators.
+%  \begin{itemize}
+%  The feature detects ABR video from major online video platforms
+%  and provides optimization techniques and capabilities 
+%  to optimize ABR video traffic over mobile networks, improving this user experience and reducing the overall network bandwidth consumption.
+  Feature currently licensed to several mobile operators across the globe (O2 UK, EE UK, Telefónica Spain)
+  \begin{itemize}
+    \item Product development
+    \begin{itemize}
+      \item Feature design in collaboration with team leaders of other features
+      \item High performace, low level system and network C programming. Key areas:
+      \begin{itemize}
+        \item TCP congestion algorithms
+        \item QoS algorithms
+        \item Encrypted video traffic detection algorithms
+      \end{itemize}
+      \item Performance testing to support up to 10Gbps throughput per node
+    \end{itemize}
+    \item Project managment
+    \begin{itemize}
+      \item tracking all mechanics required for a project delivery, including but not limited to task assignments, builds, release schedules, other logistics 
+      \item Technical oversight and mentoring to team members
+    \end{itemize}
+    \item Field engagement
+    \begin{itemize}
+      \item Field support in several customer escalations by 
+      \begin{itemize}
+        \item assessing all field originating data
+        \item triaging issues
+        \item dispatching work to other team members
+        \item providing feedback to the PS/CS teams to be communicated to the customer
+      \end{itemize}
+      \item Deliver TOIs and training toward sales teams
+      \item Deliver presentation/demos towards EMEA mobile operators sales reps
+    \end{itemize}
+    \item lala
+  \end{itemize}
+  \item Team leader in performance refactoring of a Java based legacy CDN analytics platform
   \begin{itemize}
     \item Head of the engineering project that resulted 
     the increase of the ingestion performance from 90Krec/sec to 500Krecs/sec 
@@ -227,10 +267,10 @@ and providing adapted RIA content to the web browser. }
 {(More than 10 years of experience in multinational corporate environment)}
 %\cvitemwithcomment{Language 3}{Skill level}{Comment}
 
-%\section{Computer skills}
-%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\section{Computer skills}
+\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
 
 \section{Volunter}
 \cvitem{TEDxPatras}{Director of photography in TEDxPatras 2016 and TEDxPatras 2017}
@@ -244,10 +284,10 @@ and providing adapted RIA content to the web browser. }
 %\cvlistitem{Item 2}
 %\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
 
-%\section{Extra 2}
-%\cvlistdoubleitem{Item 1}{Item 4}
+\section{Extra 2}
+\cvlistdoubleitem{Item 1}{Item 4}
 %\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
 
 %\section{References}
 %\begin{cvcolumns}
