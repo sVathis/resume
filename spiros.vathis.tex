@@ -19,6 +19,8 @@
 \usepackage{fontawesome}
 %\usepackage{hyperref}
 
+\usepackage{url}
+%\urldef\patenturl\url{http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9075877.PN.&OS=PN/9075877&RS=PN/9075877}
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
@@ -235,12 +237,14 @@ using Visual C++ utilizing the PEM, S/MIME and custom chaotic method based secur
 \cventry{1991--1995}{Bsc in Mathematics}{Univeristy of Patras}{Patras, Greece}{}{}
 
 \subsection{Master thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Supervisors}
-\cvitem{description}{Short thesis abstract}
+\cvitem{Title}{\emph{Geolocation data enable web mashups }}
+\cvitem{Supervisor}{Dimitris Kalles}
+\cvitem{Description}{This thesis presents the analysis, design and development process of an information system that combines and interlinks existing web services that operate independently on a large scale, utilizing geo-location information.
+This information system shall be used for reporting stolen bicycles and performing corresponding queries.}
+\cvitem{URL}{\href{http://hdl.handle.net/11128/268}{\fancyhref{http://hdl.handle.net/11128/268}}}
 
 \section{Patent}
-\cvitem{Number}{\textbf{US9075877}}
+\cvitem{Number}{\textbf{US9075877}}% \href{\patenturl}{\faExternalLink}}
 \cvitem{Title}{\emph{System and method for transparent in-network adaptation of rich internet applications }}
 \cvitem{Issued}{Jun 29, 2012}
 \cvitem{Inventors}{Tsolis Georgios, Zafiris Paraskevas, Vathis Spyridon}
@@ -251,6 +255,7 @@ The method comprises receiving processing a request by communicating with the we
 and the parameters used to instantiate the RIA file,
 adapting the RIA content of the RIA file for display in the web browser without requiring an RIA player at the mobile device,
 and providing adapted RIA content to the web browser. }
+%\faExternalLink{URL}{Link}
 
 
 
