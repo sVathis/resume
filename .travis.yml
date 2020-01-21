@@ -7,8 +7,6 @@ script:
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build spiros.vathis.tex
 deploy:
   provider: releases
-  api_key:
-    secure: 984ba65a40cfaa4f59ee6d3efe076bf0b021bcb8
   file:
   - _build/spiros.vathis.pdf
   skip_cleanup: true
