@@ -1,345 +1,362 @@
-% !TeX root = spiros.vathis.tex
-% start of file `template.tex'.
-% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+%-------------------------
+% Resume in Latex
+% Author : Spiros Vathis
+% License : MIT
+%------------------------
 
-\documentclass[10pt,a4paper]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[letterpaper,10pt]{article}
 
-% moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
 \usepackage{fontawesome}
-%\usepackage{hyperref}
+\input{glyphtounicode}
+\usepackage{lipsum}
 
-% adjust the page margins
-\usepackage[scale=0.85]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-\newcommand{\fancyhref}[1]{\color{blue}\underline{#1}}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-% personal data
-\name{Spiros}{Vathis}
-%\title{Resumé title - This is a title}                               % optional, remove / comment the line if not wanted
-\address
-%{Kon/nou  Kavafi 120}
-%{Patra 26335}
-{Patras, Greece}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+30~694~4332973}                   % optional, remove / comment the line if not wanted
-\phone[fixed]{+30~2610~331573}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{spiros.vathis@gmail.com}                               % optional, remove / comment the line if not wanted
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-%\extrainfo{}                 % optional, remove / comment the line if not wanted
-\extrainfo{\faGithub:  \href{https://github.com/sVathis}{github.com/sVathis}\\
-           \faLinkedin: \href{https://www.linkedin.com/in/vathis}{linkedin.com/in/vathis}}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{``I solve problems''}                                 % optional, remove / comment the line if not wanted
-\moderncvicons{marvosym}
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+\urlstyle{same}
 
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
-\begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
-\makecvtitle
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-\section{Experience}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
-\subsection{Vocational}
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
-\cventry
-{2018 - 2021}
-{Principal Software Engineer}{Citrix Inc.}{Patras, Greece}{}
- {%Principal software engineer in the Netscaler Application Development Team.\newline{}
-Detailed achievements:%
-\begin{itemize}
-  \item
-TODO: add Azure HMC achievements
-  \item
-TODO: add SDWAN achievements
-\end{itemize}}
+\hyphenation{of-ten}
 
-
-\cventry{2012 -- 2018}{Staff Software Engineer}{Citrix Inc.}{Patras, Greece}{}
-{Staff software engineer in the \href{https://www.citrix.com/products/citrix-adc/}{\fancyhref{Citrix ADC}} Application Development Team.
-%Detailed achievements:
-\begin{itemize}
-  \item Feature head engineer and team leader in development of 
-  \href{https://docs.citrix.com/en-us/citrix-adc/current-release/citrix-adc-support-for-telecom-service-providers/citrix-adc-Video-Optimization/getting-started.html}{\fancyhref{Citrix ADC Video Optimization}} feature for mobile operators.
-%  \begin{itemize}
-%  The feature detects ABR video from major online video platforms
-%  and provides optimization techniques and capabilities 
-%  to optimize ABR video traffic over mobile networks, improving this user experience and reducing the overall network bandwidth consumption.
-  Feature currently licensed to several mobile operators across the globe (O2 UK, EE UK, Telefónica Spain)
-  \begin{itemize}
-    \item Product development
-    \begin{itemize}
-      \item Feature design in collaboration with team leaders of other features
-      \item High performace, low level system and network C programming. Key areas:
-      \begin{itemize}
-        \item TCP congestion algorithms
-        \item QoS algorithms
-        \item Encrypted video traffic detection algorithms
-      \end{itemize}
-      \item Performance testing to support up to 10Gbps throughput per node
-    \end{itemize}
-    \item Project managment
-    \begin{itemize}
-      \item tracking all mechanics required for a project delivery, including but not limited to task assignments, builds, release schedules, other logistics 
-      \item Technical oversight and mentoring to team members
-    \end{itemize}
-    \item Field engagement
-    \begin{itemize}
-      \item Field support in several customer escalations by 
-      \begin{itemize}
-        \item assessing all field originating data
-        \item triaging issues
-        \item dispatching work to other team members
-        \item providing feedback to the PS/CS teams to be communicated to the customer
-      \end{itemize}
-      \item Deliver TOIs and training toward sales teams
-      \item Deliver presentation/demos towards EMEA mobile operators sales reps
-    \end{itemize}
-  \end{itemize}
-  \item Team leader in performance refactoring of a Java based legacy CDN analytics platform
-  \begin{itemize}
-    \item Head of the engineering project that resulted 
-    the increase of the ingestion performance from 90Krec/sec to 500Krecs/sec 
-    and the end-to-end performance from 125Krec/sec to 1.25Mrecs/sec 
-    of a legacy Java based CDN analytics platform.
-  \end{itemize}
-  \item Tech leader in the development of a cache server for the Transparent Caching platform
-  \begin{itemize}
-    \item Design of an S3-like REST HTTP API for caching web content
-    \item Design the corresponding high performance,
-    scalable server platform for web content transparent caching
-    based on the aforementioned REST API.
-    \item Advocate the use of high performance, scalable technologies (node.js, Couchbase NoSQL database) 
-    as key components of the platform during product prototyping. 
-    Act as a node.js evangelist.
-    \item Implement performance critical subsystems.
-    \item Analyze performance test results 
-    and identify major bottlenecks during performance testing.
-  \end{itemize}
-\end{itemize}}
-
-\cventry{2008 -- 2012}{Senior Software Engineer}{Bytemobile Inc.}{Patras, Greece}{}
-{Senior software engineer in Bytemobile European Development Center.\newline{}%
-Detailed achievements:%
-\begin{itemize}%
-  \item Lead engineer in the Flash Adaptation framework in the Unison platform
-  \begin{itemize}%
-    \item	Integrate third-party Flash Adaptation engine 
-    (developed on the node.js framework) in Unison platform
-    \item	Reverse engineering of C legacy code to identify hook points required for integrating third-party code
-    \item	Design and implement of process management, synchronization, configuration and logging features.
-    \item	Became a node.js enthusiast.
-  \end{itemize}
-  \item Code maintenance for the legacy high performance Content Adaptation proxy
-  \begin{itemize}%
-    \item Design and implement stability enhancements based on bugs reported in the field.
-    \item Identify and propose solutions for major threading and synchronization issue.
-    \item Hands on low level debugging and troubleshooting stability \& threading issues 
-    such as threads starvation, dead-locks etc.
-  \end{itemize}
-  \item Design \& implementation 
-  of a high performance server side HTML content adaptation engine 
-  running on Solaris, based on Mozilla Gecko Runtime Engine (GRE)
-  \begin{itemize}%
-    \item Modifications and extensions in Mozilla Gecko codebase 
-    for embedding it in a high performance, server side content adaptation \& optimization engine
-    \item UML design. Implementation utilizing on XPCOM technologies
-    \item C++ programming on Solaris 10 platform
-    \item Assist co-workers getting familiar with Mozilla codebase, development \& debugging techniques
-    \item Hands-on problem identification and solution
-  \end{itemize}
-\end{itemize}}
-
-
-\cventry{
-  %December
-  2001 --
-  %March
-  2008 }
-  {Senior Software Engineer}{Pi-Medical Ltd.}{Athens, Greece}{}
-  {Design, implementation and maintenance of 3D simulation application of linear accelerators 
-  used for automatic collision detection during radiotherapy treatment.{}%
-\begin{itemize}%
-  \item Design using UML methodology and tools
-  \item C++ programming on Win32 platform
-  \item Extensive use of OpenGL graphics library
-  \item Administration of development support systems (source control, bug tracking, etc.)
-  \item Created documentation for CE approval (required for all medical software)
-  \item Creation and adjustment of 3D models using 3D Studio \& Pro/ENGINEER CAD application
-\end{itemize}}
-
-\cventry{
-%April
-1997 -- 
-%May
-2000}
-{Freelance programmer}{Expertnet S.A.}{Patras, Greece}{}
-{External consultant for research projects PAVE \& ICE-TEL.\newline{}
-Development of cryptography plug-in for Eudora email client 
-using Visual C++ utilizing the PEM, S/MIME and custom chaotic method based security protocols.
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
 }
 
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
-\subsection{Teaching}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
-\cventry{
-  %Sep
-  2006 --
-  %June
-  2008}
-  {Assistant lab professor}{Patras Technological Education Institute}{Pirgos, Greece}{}
-{Course: Introduction to computer programming using the Pascal programming language}
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
-\cventry{1999 -- 2000}{Tutor}{Hellenic Mathematical Society}{Patras, Greece}{}
-{Courses:
-\begin{itemize}%
-  \item Introduction to Computer Science
-  \item DOS
-  \item Windows
-  \item Microsoft PowerPoint
-  \item C/C++ programming
-\end{itemize}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
-\cventry{
-  %January
-  % 1996 -- 
-  %June
-  1996}{Tutor}{Carriera}{Patras, Greece}{}
-{Lectures on C++ programming language}
+\renewcommand{\labelitemii}{$\circ$}
 
-\cventry{1996--1998}{Post-graduate lab professor assistant}{Mathematics Department, University of Patras}{Patra, Greece}{}
-{Course: Compilers}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%\newcommand{\xLarge}{\@setfontsize\xLarge\@xviipt{22}}
+\newcommand{\fancyhref}[1]{\color{blue}\underline{#1}}
+\newcommand{\resumeUnlabeledItem}[1]{\item{{#1 \vspace{-2.5pt}}}}
 
 
-\section{Education}
-\cventry{2008--2011}{Msc in Information Systems}{Open University of Cyprus}{Nicosia, Cyprus}{}{}
-\cventry{1991--1995}{Bsc in Mathematics}{Univeristy of Patras}{Patras, Greece}{}{}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Master thesis}
-\cvitem{Title}{\emph{Geolocation data enabled web mashups }\href{http://hdl.handle.net/11128/268}{\faExternalLink}}
-\cvitem{Supervisor}{Dimitris Kalles}
-\cvitem{Abstract}{This thesis presents the analysis, design and development process of an information system that combines and interlinks existing web services that operate independently on a large scale, utilizing geo-location information.
-This information system shall be used for reporting stolen bicycles and performing corresponding queries.}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Huge Spiros Vathis}} & {\faEnvelope} : \href{mailto:spiros.vathis@gmail.com}{spiros.vathis@gmail.com}\\
+   & \faMobile  : +30 694 4332973 \\
+   & \faGithub:  \href{https://github.com/sVathis}{github.com/sVathis}\\
+   & \faLinkedin: \href{https://www.linkedin.com/in/vathis}{linkedin.com/in/vathis}
+\end{tabular*}
+
+\section{Professional Profile}
+{An experienced software engineer with strong professional background in design and implementation of high performance, data-intensive, real-time applications. With more than 20 years of technical experience on several platforms and environments, ranging from high performance system programming on Solaris \& FreeBSD, performance tuning and optimization of legacy Java based systems to OpenGL programming in Windows, I possess leadership skills from within numerous functional areas of software engineering. Additionally, my mathematical background (I hold a B.Sc. in mathematics) provides me the analytical thinking skills required in acute problem solving situations.}
+
+
+%-----------EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Citrix Inc.}{Patras, Greece}
+      {Principal Senior Software Engineer}{Mar 2018 - Nov 2021}
+      \newline \\As a Principal Software Engineer I was leading teams in delivering features in various products and services. In parallel I contributed in growing these teams by mentoring team members, delivering trainings in brown-bag sessions, interviewing candidates for hire etc. I highlight some key items:
+      \resumeItemListStart
+      \resumeItem{Citrix SDWAN Edge Security}
+          {I was the team leader for \href{https://docs.citrix.com/en-us/tech-zone/learn/tech-briefs/citrix-sdwan-edge-security.html}{\fancyhref{Citrix SD-WAN Edge Security}}, a feature that provides Intrusion Detection, Web Filtering, and Anti-Malware natively in On-premises appliances for enterprises that use Citrix SD-WAN.
+          \begin{multicols}{2}
+            \emph{Responsibilities}\\
+            • Leading a team of 10 engineers\\
+            • Feature design\\
+            • Performance analysis and optimization\\
+            \vfill\null
+            \columnbreak
+            \emph{Achievements}\\
+            Delivered a feature that:\\
+            • Simplifies information security management for protecting the SDWAN branch network from internet threats\\
+            • Provides a single management and reporting pane for various security functionalities along with SD-WAN\\
+            • Eliminates the need for multiple branch solutions, by consolidating routing, SD-WAN, and security capabilities on a single appliance\\
+            • Reduces network complexity and costs
+          \end{multicols}
+          }
+        \resumeItem{Citrix ADC Hybrid Multicloud}
+          {Team leader for Azure tags for \href{https://docs.citrix.com/en-us/citrix-adc/current-release/deploying-vpx/deploy-vpx-on-azure/tags.html}{\fancyhref{Citrix ADC VPX}}, a feature that manages Azure hosted Citrix ADC load balancing service groups associated with an Azure tag.
+          \begin{multicols}{2}
+            \emph{Responsibilities}\\
+            • Leading a team of 4 engineers\\
+            • Feature design \& implementation using Azure SDK for Python utilizing several Azure APIs\\
+            • Integration with the existing Citrix ADC framework.\\
+            \vfill\null
+            \columnbreak
+            \emph{Achievements}\\
+            This was a relatively low key project in terms of customer impact but it gave me two big opportunities:\\
+            • to learn Python at the age of 45 and use it to deliver a production quality software\\
+            • to learn and start using several Azure services and APIs (e.g. Azure Resource Manager REST API, Azure Resource Graph REST API, Azure Functions etc.)\\
+          \end{multicols}
+          }
+      \resumeItemListEnd
+      \resumeSubSubheading
+      {Staff Software Engineer}{July 2012 - Mar 2018}
+      \newline \\ As a Staff Software Engineer I was leading teams in delivering features in various products and services.
+      \resumeItemListStart
+      \resumeItem{Citrix ADC Video Optimization}
+      {Team leader in \href{https://docs.citrix.com/en-us/citrix-adc/current-release/citrix-adc-support-for-telecom-service-providers/citrix-adc-Video-Optimization/getting-started.html}{\fancyhref{Citrix ADC Video Optimization}} feature for mobile operators.
+      \begin{multicols}{2}
+        \emph{Responsibilities}\\
+        • Leading a team of 4~6 engineers, providing mentoring and technical oversight\\
+        • Feature design and key implementation (using C on FreeBSD platform)\\
+        • Support of field teams (product demos, TOIs, triaging issues, assisting CS teams)\\
+        \vfill\null
+        \columnbreak
+        \emph{Achievements}\\
+        • Feature was licensed to mobile operators across the globe (O2 UK, EE UK, Telefónica Spain) resulting 25\% increase in hours of video and 20\% increase in total number of videos watched.\\
+        • Mobile operators were able to efficiently manage network resources during congestion and peak hours, improve video play consistency and reduce video stalling providing a radically improved user experience in video consumption over their networks.
+      \end{multicols}
+      }
+      \resumeItem{Skytide CDN Analytics}
+      {Team leader in performance refactoring project on a Java based legacy CDN analytics platform.
+      \begin{multicols}{2}
+        \emph{Responsibilities}\\
+        • Leading a team of 4~6 engineers\\
+        • Performance analysis using both Java and OS profiling tools.
+        \vfill\null
+        \columnbreak
+        \emph{Achievements}\\
+        • Increase of the ingestion performance from 90Krecs/sec to 500Krecs/sec and the end-to-end performance from 125Krecs/sec to 1.25Mrecs/sec
+      \end{multicols}
+      }
+
+      \resumeItem{T2100 Content Accelerator}
+      {Team leader in the development of \href{https://docs.citrix.com/en-us/citrix-adc/current-release/optimization/content-accelerator.html}{\fancyhref{Citrix T2100 content accelerator}}  used by mobile operators as content accelerator.
+      \begin{multicols}{2}
+        \emph{Responsibilities}\\
+        • Design of an S3-like REST HTTP API for caching web content and the corresponding high performance, scalable server platform.\\
+        • Implement performance critical subsystems.\\
+        • Analyze performance test results and identify major bottlenecks during performance testing\\
+        \vfill\null
+        \columnbreak
+        \emph{Achievements}\\
+        • I successfully influenced major product stakeholders (PM, upper management etc. ) into adopting modern high performance, scalable technologies (node.js, Couchbase NoSQL database) instead of legacy tech (e.g. C programming, SQL databases) that was, at time, rooted in team's culture.
+      \end{multicols}
+      }
+      \resumeItemListEnd
+
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+    \resumeSubheading
+      {Bytemobile Inc.}{Patras, Greece}
+      {Senior Software Engineer}{Apr 2008 - July 2012}
+      \resumeItemListStart
+        \resumeItem{Flash Adaptation}
+          {Head developer in the Flash Adaptation framework in the Unison platform
+          }
+        \resumeItem{Bytemobile WFM}
+          {Design \& implementation of a server side HTML content adaptation engine based on Mozilla Gecko Runtime Engine (GRE)}
+        \resumeItem{Content Adaptation Proxy}
+          {Code maintenance for the legacy high performance Content Adaptation proxy}
+      \resumeItemListEnd
+
+
+      \resumeSubheading
+      {Pi-Medical Ltd.}{Athens, Greece}
+      {Senior Software Engineer}{Dec 2001 - Mar 2008}
+      \resumeItemListStart
+        \resumeItem{Virtual Treatment Room}
+          {Design, implementation and maintenance of 3D simulation application of linear accelerators used for automatic collision detection during radiotherapy treatment\\
+          TODO: add more info\\
+          • Design using UML methodology and tools\\
+          • C++ programming on Win32 platform\\
+          • Extensive use of OpenGL graphics library\\
+          • Administration of development support systems (source control, bug tracking, etc.)\\
+          • CE approval documentation\\
+          • Creation and adjustment of 3D models using 3D Studio \& Pro/ENGINEER CAD application
+          }
+      \resumeItemListEnd
+
+
+      \resumeSubheading
+      {Expertnet S.A.}{Patras, Greece}
+      {Software Engineer}{Apr 1997 - May 2000}
+      \resumeItemListStart
+        \resumeItem{Eudora PEM plugin}
+          {Development of cryptography plug-in for Eudora email client using Visual C++ utilizing the PEM (Privacy Enhanced Mail), S/MIME and custom security protocol based on chaotic methods
+          }
+      \resumeItemListEnd
+
+
+      \resumeSubheading
+      {University of Patras, Research Committee }{Patras, Greece}
+      {Software Engineer}{1997 - 2000}
+      \resumeItemListStart
+        \resumeItem{Various research project}
+          {Software engineer in various university related research projects
+          }
+      \resumeItemListEnd
+
+
+      \resumeSubheading
+      {Hartling Ltd. }{Athens, Greece}
+      {Software Engineer (part time)}{1994 - 1996}
+      \resumeItemListStart
+        \resumeUnlabeledItem{TODO: }
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {Voulgaris Publishing}{Patras, Greece}
+      {Graphics designer (part time)}{1992 - 1994}
+      \resumeItemListStart
+        \resumeUnlabeledItem{Various DTP projects using CorelDraw}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+\section{Academic Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {TEI of Patra, Department of Mass Media \& Informatics}{Pyrgos, Greece}
+    {Assistant Laboratory Professor}{Sept 2006 - June 2008}
+    \resumeItemListStart
+      \resumeUnlabeledItem{}{Assistant laboratory professor for freshmen course: “Introduction to computer programming using the Pascal programming language”}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Greek Mathematics Society}{Patras, Greece}
+    {Instructor}{1999 - 2000}
+    \resumeItemListStart
+      \resumeUnlabeledItem{}{Vocational training courses on DOS, Windows and C progamming language}
+    \resumeItemListEnd
+
+
+    \resumeSubheading
+    {University of Patras, Department of Mathematics}{Patras, Greece}
+    {Assistant Laboratory Professor}{1996 - 1998}
+    \resumeItemListStart
+      \resumeUnlabeledItem{}{Laboratory assistant professor for course: “Introduction to compilers using lex \& yacc tools”}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------------
+\section{Professional Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Open University of Cyprus}{Nicosia, Cyprus}
+    {Master of Science in Information Systems}{2008 -- 2011}
+  \resumeSubheading
+    {University of Patras}{Patras, Greece}
+    {Bachelor in Mathematics}{1991 - 1996}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{palmnews.gr}
+      {Created on 1999 and running until 2001, \href{http://web.archive.org/web/20010401151451/http://www.palmnews.gr/}{\fancyhref{http://palmnews.gr}} was the first Greek portal on Palm personal digital assistant (PDA) }
+  \resumeSubHeadingListEnd
+
 
 \section{Patent}
-\cvitem{Number}{\textbf{US9075877} \href{https://patents.google.com/patent/US9075877B2/}{\faExternalLink}}
-\cvitem{Title}{\emph{System and method for transparent in-network adaptation of rich internet applications }}
-\cvitem{Issued}{Jun 29, 2012}
-\cvitem{Inventors}{Tsolis Georgios, Zafiris Paraskevas, Vathis Spyridon}
-\cvitem{Abstract}
-{A system and method that allows Rich Internet Applications content
-to be adapted for a web browser on a mobile device without requiring an installation of an RIA player.
-The method comprises receiving processing a request by communicating with the web server to acquire the RIA file
-and the parameters used to instantiate the RIA file,
-adapting the RIA content of the RIA file for display in the web browser without requiring an RIA player at the mobile device,
-and providing adapted RIA content to the web browser. }
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {United States Patent Office}{}
+    {US9075877 - System and method for transparent in-network adaptation of rich internet applications}{Jun 29, 2012}
+    \resumeItemListStart
+      \resumeItem{Tsolis G., Zafiris P., Vathis S.}
+      {A system and method that allows Rich Internet Applications content
+      to be adapted for a web browser on a mobile device without requiring an installation of an RIA player.
+      The method comprises receiving processing a request by communicating with the web server to acquire the RIA file
+      and the parameters used to instantiate the RIA file,
+      adapting the RIA content of the RIA file for display in the web browser without requiring an RIA player at the mobile device,
+      and providing adapted RIA content to the web browser. }
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+%\cvitem{Number}{\textbf{US9075877} \href{https://patents.google.com/patent/US9075877B2/}{\faExternalLink}}
+%\cvitem{Title}{\emph{System and method for transparent in-network adaptation of rich internet applications }}
+%\cvitem{Issued}{Jun 29, 2012}
+%\cvitem{Inventors}{Tsolis Georgios, Zafiris Paraskevas, Vathis Spyridon}
+%\cvitem{Abstract}
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
 
 
-\section{Millitary service}
-\cventry{2001--2002}{Private}{Research and Informatics Corps}{Hellenic Army}{Greece}{}
-
-\section{Languages}
-\cvitemwithcomment{Greek}{Native}{}
-\cvitemwithcomment{English}{Near native}
-{(More than 10 years of experience in multinational corporate environment)}
-%\cvitemwithcomment{Language 3}{Skill level}{Comment}
-
-\section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-
-\section{Volunter}
-\cvitem{TEDxPatras}{Director of photography in TEDxPatras 2016 and TEDxPatras 2017}
-
-\section{Interests}
-\cvitem{Photography}{I am a film photography enthusiast. I collect old and broken film cameras and manual focus lenses, I repair them and shoot photos with them.}
-\cvitem{Hiking}{I enjoy hiking on mountain tops and take extraordinary photos from there.}
-\cvitem{Cycling}{I am a casual cyclist covering 50 to 100 km weekly.}
-
-\section{Interests}
-\cvlistitem{Photography - I am a film photography enthusiast. I collect old and broken film cameras and manual focus lenses, I repair them and shoot photos with them.}
-\cvlistitem{Casual cyclist covering 50 to 100 km weekly.}
-
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
-%\section{References}
-%\begin{cvcolumns}
-%  \cvcolumn{Managers}{\begin{itemize}\item Artemis Christopoulou - artemis.christopoulou@citrix.com\item Person 2\item Person 3\end{itemize}}
-%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-%\end{cvcolumns}
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-\clearpage
-%-----       letter       ---------------------------------------------------------
-% recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sahtis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-Albert Einstein discovered that $e=mc^2$ in 1905.
-
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-
-\makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+%-------------------------------------------
 \end{document}
-
-
-%% end of file `spiros.vathis.tex'.
