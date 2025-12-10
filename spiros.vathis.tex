@@ -16,9 +16,13 @@
 \usepackage{tabularx}
 \usepackage{verbatim}
 
+% Define global list margin
+\newlength{\listmargin}
+\setlength{\listmargin}{15pt}
+
 \pagestyle{fancy}
 \fancyhf{} % clear header/footer
-\cfoot[C]{\thepage} % center footer with page number
+\cfoot{\thepage} % center footer with page number
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -65,7 +69,7 @@
 Experienced software engineer with more than 25 years of experience designing and implementing high-performance, data-intensive, real-time systems. Strong background in platform engineering, system \& network programming, distributed systems, cloud-native architectures, performance optimization, and team leadership. Proven track record across enterprise, cloud, and startup environments. Mathematical background that provides analytical thinking skills required in acute problem solving situations. Holds a B.Sc. in Mathematics and an M.Sc. in Information Systems.
 
 % \section{Technical Skills}
-% \begin{itemize}[leftmargin=*,noitemsep]
+% \begin{itemize}[leftmargin=\listmargin,noitemsep]
 %   \item Languages: Python, C++, SQL, JavaScript, C
 %   \item Cloud \& Platforms: Azure, AWS, Kubernetes (EKS), Docker, ACI
 %   \item Data \& Observability: ETL, Telemetry pipelines, CI/CD, SQL-as-Code change management
@@ -75,7 +79,7 @@ Experienced software engineer with more than 25 years of experience designing an
 
 \section{Professional Experience}
 \noindent\textbf{Staff Software Engineer} --- Netscaler / Cloud Software Group \hfill Patras, Greece \hfill Oct 2023 -- Dec 2025
-\begin{itemize}[leftmargin=*,noitemsep]
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
 
   \resumeItem{\textbf{Governance \& CI/CD Maturity:}}
      {Established full containerization for ETL telemetry data workloads in Python and introduced SQL-as-code for schema lifecycle management, improving deployment consistency, traceability and integration with CI/CD workflows.}
@@ -88,7 +92,7 @@ Experienced software engineer with more than 25 years of experience designing an
 \end{itemize}
 
 \noindent\textbf{Principal Software Engineer} --- mismatch.ai \hfill Patras, Greece \hfill Mar 2022 -- Jul 2023
-\begin{itemize}[leftmargin=*,noitemsep]
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
   \resumeItem{\textbf{Stream Orchestration:}}
     {Led design and Python development of a live-streaming orchestrator service on AWS with a REST API to manage basketball real-time video game streams.}
 
@@ -101,7 +105,7 @@ Experienced software engineer with more than 25 years of experience designing an
 \end{itemize}
 
 \noindent\textbf{Principal / Staff Software Engineer} --- Citrix Inc. \hfill Patras, Greece \hfill Jul 2012 -- Nov 2021
-\begin{itemize}[leftmargin=*,noitemsep]
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
   \resumeItem{\textbf{Team Leadership:}}
     {Led teams (4--10 engineers) delivering Citrix SD-WAN Edge Security (IDS, web filtering, anti-malware) and Citrix ADC Hybrid Multicloud features.}
 
@@ -120,38 +124,53 @@ Experienced software engineer with more than 25 years of experience designing an
 \end{itemize}
 
 \noindent\textbf{Senior Software Engineer} --- Bytemobile Inc. \hfill Patras, Greece \hfill Apr 2008 -- Jul 2012
-\begin{itemize}[leftmargin=*,noitemsep]
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
   \resumeItem{Head developer for Flash Adaptation framework in the Unison platform and implemented server-side HTML content adaptation using Mozilla Gecko rendering engine.}
   \resumeItem{Maintained the 'C' legacy codebase of a high-performance Content Adaptation HTTP proxy.}
 \end{itemize}
 
 \noindent\textbf{Senior Software Engineer} --- Pi-Medical Ltd. \hfill Athens, Greece \hfill Dec 2001 -- Mar 2008
-\begin{itemize}[leftmargin=*,noitemsep]
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
   \resumeItem{Designed and implemented a 3D simulation application for linear accelerators (collision detection) using C++ and OpenGL on Windows; produced documentation required for 'CE' certification.}
 \end{itemize}
 
 \noindent\textbf{Software Engineer} --- Expertnet S.A. \hfill Patras, Greece \hfill Apr 1997 -- May 2000
-\begin{itemize}[leftmargin=*,noitemsep]
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
   \resumeItem{Developed a S/MIME - PEM cryptography plugin for Eudora mail client using Visual C++ for Windows.}
 \end{itemize}
 
 \section{Academic Experience}
 \noindent\textbf{Assistant Laboratory Professor} --- TEI of Patra, Dept. of Mass Media \& Informatics \hfill Pyrgos, Greece \hfill Sept 2006 -- Jun 2008
-\begin{itemize}[leftmargin=*,noitemsep]
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
   \resumeItem{Freshman course tutor in Introduction to Computer Programming (Pascal).}
 \end{itemize}
 
 \noindent\textbf{Instructor} --- Greek Mathematics Society \hfill Patras, Greece \hfill 1999 -- 2000
-\begin{itemize}[leftmargin=*,noitemsep]
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
   \resumeItem{Delivered vocational training on DOS, Windows, and C programming.}
 \end{itemize}
 
 \section{Education}
-\noindent Master of Science in Information Systems --- Open University of Cyprus \hfill Nicosia \hfill 2008 -- 2011\\
-\noindent Bachelor in Mathematics --- University of Patras \hfill Patras, Greece \hfill 1991 -- 1996
+\noindent\textbf{Master of Science in Information Systems}\\Open University of Cyprus \hfill Nicosia \hfill 2008 -- 2011\\
+\noindent\textbf{Bachelor in Mathematics}\\University of Patras \hfill Patras, Greece \hfill 1991 -- 1996
 
 \section{Patent}
-US9075877 --- System and method for transparent in-network adaptation of rich internet applications \hfill Issued Jun 29, 2012\\
+\noindent\textbf{US9075877} \\ System and method for transparent in-network adaptation of rich internet applications \hfill Issued Jun 29, 2012\\
 Inventors: Tsolis G., Zafiris P., Vathis S.
 
+\section{Pet project}
+\noindent\textbf{Self hosted home lab} \\
+Designed and implemented a self-hosted home lab using Docker for containerization, Cloudflare Zero Trust reverse proxy \& Wireguard for secure remote acces, and various open-source tools for network monitoring and management.\\
+Self hosted services include:
+\begin{itemize}[leftmargin=\listmargin,noitemsep]
+    \resumeItem{\textbf{Immich}}{for personal photo management}
+    \resumeItem{\textbf{Home Assistant}}{for smart home automation}
+    \resumeItem{\textbf{AdGuard Home}}{for network-wide ad blocking and privacy protection}
+    \resumeItem{\textbf{Dawarich}}{for self hosted location history}
+    \resumeItem{\textbf{Paperless-ngx}}{for document management}
+    \resumeItem{\textbf{Cloudflare Zero Trust} reverse proxy and self hosted \textbf{Wireguard}}service {for secure remote access}
+    \resumeItem{\textbf{Navidrome}}{for personal music streaming
+    }
+    \resumeItem{Several other custom build containers in Python that server special needs}
+\end{itemize}
 \end{document}
